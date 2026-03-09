@@ -28,7 +28,7 @@
 <body class="bg-[#F8FAFC] min-h-screen">
 
     <header class="bg-base-100 shadow-sm">
-        <div class="navbar w-11/12 mx-auto">
+        <div class="sm:navbar w-11/12 mx-auto space-y-4 py-4">
             <div class="flex-1">
                 <div class="flex items-center gap-2">
                     <img class="w-9" src="./assets/github-logo.png" alt="">
@@ -85,6 +85,16 @@
         </section>
 
 
+        <!-- modal -->
+        <!-- Open the modal using ID.showModal() method -->
+        <!-- <button class="btn" onclick="Issue_Details.showModal()">open modal</button> -->
+        <div id="modal-container">
+        </div>
+
+        <!-- Loading  -->
+        <div id="loading-spinner" class="flex justify-center items-center h-[60vh] hidden">
+            <span class="loading loading-spinner loading-xl"></span>
+        </div>
 
         <!-- Issue cards -->
         <section class="bg-[#FBFBFB] p-4">
