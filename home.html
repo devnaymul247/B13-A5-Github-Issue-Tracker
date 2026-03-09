@@ -45,6 +45,60 @@
     </header>
 
 
+    <main class="mt-16">
+        <!-- level buttons-->
+        <section class="mb-10">
+            <div class="container mx-auto">
+                <div class="bg-white p-10">
+                    <div class="flex gap-3">
+                        <button onclick="filterIssues('all',this)" class="filter-btn btn btn-primary">All</button>
+                        <button onclick="filterIssues('open',this)" class="filter-btn btn btn-outline">Open</button>
+                        <button onclick="filterIssues('closed',this)" class="filter-btn btn btn-outline">Close</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Issues -->
+        <section>
+            <div class="container mx-auto">
+                <div class="bg-white p-10">
+                    <div class=" flex-col md:flex-row md:flex justify-between items-center space-y-3">
+                        <div>
+                            <div class="flex items-center gap-4">
+                                <div class="bg-[#ECE4FF] rounded-full p-2.5">
+                                    <img class="w-12" src="./assets/Aperture.png" alt="">
+                                </div>
+                                <div>
+                                    <h2 id="issue-count" class="text-[#1F2937] text-[20px] font-semibold">0 Issues</h2>
+                                    <p class="text-[#64748B]">Track and manage your project issues</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <span><i class="fa-solid fa-circle text-green-500"></i> Open</span>
+                            <span><i class="fa-solid fa-circle text-[#A855F7]"></i> Close</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Issue cards -->
+        <section class="bg-[#FBFBFB] p-4">
+            <div class="container mx-auto">
+                <div>
+                    <div id="card-container" class="grid justify-center md:grid-cols-2 lg:grid-cols-4 gap-5">
+                        
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
     <script src="home.js"></script>
 </body>
 
