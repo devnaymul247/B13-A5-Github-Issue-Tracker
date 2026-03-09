@@ -47,32 +47,11 @@ const loadIssues = () => {
         });
 }
 
-
-// {
-//     "id": 1,
-//     "title": "Fix navigation menu on mobile devices",
-//     "description": "The navigation menu doesn't collapse properly on mobile devices. Need to fix the responsive behavior.",
-//     "status": "open",
-//     "labels": [
-//         "bug",
-//         "help wanted"
-//     ],
-//     "priority": "high",
-//     "author": "john_doe",
-//     "assignee": "jane_smith",
-//     "createdAt": "2024-01-15T10:30:00Z",
-//     "updatedAt": "2024-01-15T10:30:00Z"
-// }
-
-
-
-
 const displayIssue = (datas) => {
     const cardContainer = document.getElementById("card-container");
     cardContainer.innerHTML = "";
 
     // Issue Count 
-
     document.getElementById("issue-count").innerText = datas.length + " Issues";
 
     datas.forEach(data => {
@@ -113,7 +92,6 @@ const displayIssue = (datas) => {
         `
 
         cardContainer.append(card);
-
     });
     manageSpinner(false)
 }
@@ -126,7 +104,6 @@ const openIssueModal = async (issuesId) => {
     const res = await fetch(`https://phi-lab-server.vercel.app/api/v1/lab/issue/${issuesId}`)
     const data = await res.json();
     const cardDetails = data.data
-
 
     const cardModal = document.createElement("div");
     cardModal.innerHTML = `
@@ -172,14 +149,9 @@ const openIssueModal = async (issuesId) => {
     
     
     `
-
     modalContainer.append(cardModal);
-
-
     Issue_Details.showModal();
 }
-
-
 
 document.getElementById("search-btn").addEventListener("click", () => {
     const input = document.getElementById("input-search");
@@ -195,8 +167,5 @@ document.getElementById("search-btn").addEventListener("click", () => {
             displayIssue(filterDatas)
         });
 })
-
-
-
 
 loadIssues()
